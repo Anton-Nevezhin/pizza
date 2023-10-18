@@ -5,16 +5,14 @@ import SinglePizza from '../components/SinglePizza';
 interface DisplayPizzasProps {
     pizzasList: Pizza[];
     updatePizza: (newPizza: Pizza) => void; //сохраняем редактирование
-    deletePizza: (id: number) => void; //удаляем пиццу
 }
 
-const DisplayPizzas: FC<DisplayPizzasProps> = ({ pizzasList, updatePizza, deletePizza }) => {
+const DisplayPizzas: FC<DisplayPizzasProps> = ({ pizzasList, updatePizza }) => {
     return (
         <div className='container'>
             {pizzasList.map((pizza) => {
                 return <SinglePizza
                     key={pizza.id}
-                    deletePizza = {deletePizza}
                     updatePizza = {updatePizza}//сохраняем редактирование
                     pizza={pizza} />
             })}
