@@ -25,7 +25,7 @@ const App: FC = () => {
    return (
     <div className="App">
       <div className = 'wrap'>
-        <span className = 'heading'>Наша пиццерия</span>
+        <span className = 'heading'>Каталог пиццы</span>
         <AddPizzaForm
           addPizza = {addPizza} //Будем передавать через пропсы
         />
